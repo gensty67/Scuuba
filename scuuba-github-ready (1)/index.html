@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCUUBA — Coming Soon | In Development</title>
+    <meta name="description" content="Scuuba is currently in development. We're building something new. Launching September 1.">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/maintenance.css">
+</head>
+<body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+
+    <!-- Page Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader-content">
+            <img src="assets/logo.svg" alt="Scuuba Logo" class="loader-logo">
+            <div class="loader-spinner"></div>
+            <p>Loading SCUUBA...</p>
+        </div>
+    </div>
+
+    <!-- Offline / Online Notification -->
+    <div class="network-status" id="networkStatus">Connection restored.</div>
+
+    <!-- Header / Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo.svg" alt="Scuuba Logo" class="site-logo">
+                <span class="logo-text">SCUUBA</span>
+            </a>
+            <nav class="desktop-nav" id="desktopNav">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#progress" class="nav-link">Progress</a>
+                <a href="#timeline" class="nav-link">Timeline</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+                    <span class="theme-icon">◐</span>
+                </button>
+            </nav>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Mobile Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+        <div class="mobile-nav-content">
+            <a href="#hero" class="mobile-nav-link">Home</a>
+            <a href="#progress" class="mobile-nav-link">Progress</a>
+            <a href="#timeline" class="mobile-nav-link">Timeline</a>
+            <a href="#features" class="mobile-nav-link">Features</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+            <button class="theme-toggle mobile-theme-toggle" id="mobileThemeToggle">Toggle Theme</button>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-glow"></div>
+            <div class="container hero-content">
+                <div class="status-badge-wrapper animate-fade-in">
+                    <span class="status-badge">
+                        <span class="pulsing-dot"></span> BUILDING THE NEXT VERSION
+                    </span>
+                </div>
+                <h1 class="hero-title animate-slide-in">Scuuba is in development.</h1>
+                <p class="hero-subtitle animate-fade-in">We're currently building and polishing the platform. Launching September 1.</p>
+                
+                <!-- Progress Card inside Hero -->
+                <div class="hero-progress-card glass-card animate-fade-in">
+                    <div class="progress-header">
+                        <span class="progress-label">Development Progress</span>
+                        <span class="progress-percentage" id="heroPercentage">0%</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" id="heroProgressBar" data-target="34"></div>
+                    </div>
+                    <div class="progress-footer">
+                        <span class="current-phase-text">Current phase: Core development</span>
+                        <span class="launch-date-text">📅 September 1</span>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="hero-cta animate-fade-in">
+                    <a href="#contact" class="btn btn-primary">
+                        <img src="assets/mail.svg" alt="" class="btn-icon"> Contact Us
+                    </a>
+                    <a href="#progress" class="btn btn-secondary">
+                        <img src="assets/rocket.svg" alt="" class="btn-icon"> Explore Progress
+                    </a>
+                </div>
+
+                <!-- Countdown Timer -->
+                <div class="countdown-wrapper glass-card animate-fade-in">
+                    <div class="countdown-title">Launch Countdown</div>
+                    <div class="countdown-timer" id="countdownTimer">
+                        <div class="time-box">
+                            <span class="time-value" id="daysVal">00</span>
+                            <span class="time-label">Days</span>
+                        </div>
+                        <div class="time-separator">:</div>
+                        <div class="time-box">
+                            <span class="time-value" id="hoursVal">00</span>
+                            <span class="time-label">Hours</span>
+                        </div>
+                        <div class="time-separator">:</div>
+                        <div class="time-box">
+                            <span class="time-value" id="minsVal">00</span>
+                            <span class="time-label">Minutes</span>
+                        </div>
+                        <div class="time-separator">:</div>
+                        <div class="time-box">
+                            <span class="time-value" id="secsVal">00</span>
+                            <span class="time-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Progress Section -->
+        <section id="progress" class="section progress-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Development progress</h2>
+                    <p>Scuuba is currently in development with meticulous attention to detail and performance.</p>
+                </div>
+                <div class="progress-grid">
+                    <div class="glass-card stat-card">
+                        <div class="stat-number">34%</div>
+                        <h3>Core Development</h3>
+                        <p>Our engineering team is actively building core architecture, security layers, and user experience components.</p>
+                    </div>
+                    <div class="glass-card stat-card">
+                        <div class="stat-number">100%</div>
+                        <h3>Architecture & Planning</h3>
+                        <p>Comprehensive system design, technical roadmaps, and security standards established.</p>
+                    </div>
+                    <div class="glass-card stat-card">
+                        <div class="stat-number">Sept 1</div>
+                        <h3>Target Launch</h3>
+                        <p>Mark your calendar for the official public release of the Scuuba platform.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="section timeline-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Roadmap & Timeline</h2>
+                    <p>Track our progress from initial concept to the September 1 global launch.</p>
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline-item completed">
+                        <div class="timeline-marker"><img src="assets/check.svg" alt="Complete"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-status">Complete</span>
+                            <h3>Planning</h3>
+                            <p>Scope definition, architecture formulation, and resource allocation.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item completed">
+                        <div class="timeline-marker"><img src="assets/check.svg" alt="Complete"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-status">Complete</span>
+                            <h3>Branding & UI Design</h3>
+                            <p>Visual identity, design systems, and responsive layouts crafted.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item active">
+                        <div class="timeline-marker pulsing-marker">●</div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-status glowing-status">In progress (34%)</span>
+                            <h3>Core Development</h3>
+                            <p>Building backend integrations, frontend components, and state management.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item upcoming">
+                        <div class="timeline-marker">○</div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-status">Upcoming</span>
+                            <h3>Testing & QA</h3>
+                            <p>Comprehensive automated testing, security audits, and performance tuning.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item upcoming">
+                        <div class="timeline-marker">○</div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-status">September 1</span>
+                            <h3>Final Launch</h3>
+                            <p>Global deployment, public availability, and ecosystem activation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Platform Pillars</h2>
+                    <p>Engineered from the ground up for maximum speed, security, and ease of use.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="glass-card feature-card">
+                        <div class="feature-icon"><img src="assets/rocket.svg" alt="Fast"></div>
+                        <h3>Fast & Responsive</h3>
+                        <p>Optimized asset delivery and lightweight code ensuring lightning-fast load times on all devices.</p>
+                    </div>
+                    <div class="glass-card feature-card">
+                        <div class="feature-icon"><img src="assets/check.svg" alt="Modern"></div>
+                        <h3>Modern Architecture</h3>
+                        <p>Built using cutting-edge web standards, robust security headers, and modular structure.</p>
+                    </div>
+                    <div class="glass-card feature-card">
+                        <div class="feature-icon"><img src="assets/calendar.svg" alt="Reliable"></div>
+                        <h3>Reliable Schedule</h3>
+                        <p>Strict milestone tracking guaranteeing on-time delivery for the September 1 launch.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="glass-card contact-card">
+                    <h2>Have a question?</h2>
+                    <p>If you have a question about Scuuba or the upcoming launch, get in touch with our core team.</p>
+                    <div class="contact-email-box">
+                        <span class="email-address">genstyteam@gmail.com</span>
+                    </div>
+                    <div class="contact-buttons">
+                        <a href="mailto:genstyteam@gmail.com" class="btn btn-primary">Send email</a>
+                        <button class="btn btn-secondary" id="copyEmailBtn">Copy email</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <img src="assets/logo.svg" alt="Scuuba Logo">
+                    <span>SCUUBA</span>
+                </div>
+                <p>Currently in development. Launching September 1.</p>
+                <p class="footer-email">genstyteam@gmail.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-col">
+                <h4>System</h4>
+                <p>Status: <span class="green-text">Active Development</span></p>
+                <p>Progress: <span class="green-text">34%</span></p>
+                <p class="copyright">&copy; <span id="currentYear">2026</span> Scuuba. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTopBtn" aria-label="Back to Top">↑</button>
+
+    <!-- Toast Notification System -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
