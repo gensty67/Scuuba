@@ -1,0 +1,17 @@
+{
+  "name": "scuuba-coming-soon",
+  "version": "1.0.0",
+  "description": "Scuuba premium coming soon development website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "scuuba",
+    "coming-soon",
+    "startup"
+  ],
+  "author": "Gensty Team",
+  "license": "MIT",
+  "dependencies": {}
+}
